@@ -1,0 +1,15 @@
+{
+    "mu_inclusive":{
+        "pois":"r",
+        "fits":"profile1D:syst:r",
+        "points":"20:1",
+        "fit_opts":"--setParameterRanges r=-1000,1000 --saveSpecifiedNuis all"
+    },
+
+    "mu":{
+        "pois":"",
+        "fits":"profile1D:syst:all",
+        "points":"20:1",
+        "fit_opts":"--saveSpecifiedNuis all --saveInactivePOI 1 --cminApproxPreFitTolerance=10"
+    }
+}
