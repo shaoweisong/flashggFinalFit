@@ -68,5 +68,69 @@ if [ ${WhichSamples} -eq 1 ]
     cp config_M500_SL_2017.py config_M3000_4jets_FH_2017.py 
 fi
 
+if [ ${WhichSamples} -eq 2 ]
+  then
+    echo ${whichsample}
+    # move different cat to different dir
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M300_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_1jet/output_Signal300_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M300_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_2jets/output_SignalM300_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+
+
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M500_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_1jet/output_SignalM500_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M500_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_2jets/output_SignalM500_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+
+
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M700_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_1jet/output_SignalM700_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M700_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_2jets/output_SignalM700_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+
+
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M1000_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_1jet/output_SignalM1000_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M1000_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_2jets/output_SignalM1000_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+
+
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M1500_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_1jet/output_SignalM1500_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M1500_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_2jets/output_SignalM1500_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M2000_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_1jet/output_SignalM2000_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M2000_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_2jets/output_SignalM2000_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M2600_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_1jet/output_SignalM2600_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M2600_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_2jets/output_SignalM2600_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+
+
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M3000_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_1jet/output_SignalM3000_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M3000_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_2jets/output_SignalM3000_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+
+fi
+
+if [ ${WhichSamples} -eq 3 ]
+  then
+    echo "cp config file"
+    # cp config file
+    cp config_M500_SL_2017.py config_M300_1jet_SL_2017.py 
+    cp config_M500_SL_2017.py config_M300_2jets_SL_2017.py  
+
+    cp config_M500_SL_2017.py config_M500_1jet_SL_2017.py 
+    cp config_M500_SL_2017.py config_M500_2jets_SL_2017.py  
+
+    cp config_M500_SL_2017.py config_M700_1jet_SL_2017.py 
+    cp config_M500_SL_2017.py config_M700_2jets_SL_2017.py  
+
+    cp config_M500_SL_2017.py config_M1000_1jet_SL_2017.py 
+    cp config_M500_SL_2017.py config_M1000_2jets_SL_2017.py  
+
+    cp config_M500_SL_2017.py config_M1500_1jet_SL_2017.py 
+    cp config_M500_SL_2017.py config_M1500_2jets_SL_2017.py  
+
+    cp config_M500_SL_2017.py config_M2000_1jet_SL_2017.py 
+    cp config_M500_SL_2017.py config_M2000_2jets_SL_2017.py  
+
+    cp config_M500_SL_2017.py config_M2600_1jet_SL_2017.py 
+    cp config_M500_SL_2017.py config_M2600_2jets_SL_2017.py  
+    
+    cp config_M500_SL_2017.py config_M3000_1jet_SL_2017.py 
+    cp config_M500_SL_2017.py config_M3000_2jets_SL_2017.py  
+fi
 
 

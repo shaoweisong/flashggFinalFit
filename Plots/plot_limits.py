@@ -44,7 +44,7 @@ parser.add_argument("--campaignOne",type=str, default="UnLabeled", help="Campaig
 parser.add_argument("--campaignTwo",type=str, default="UnLabeled", help="Campaign of second limits in ratio", required=False)
 
 args = parser.parse_args()
-ol = '/afs/cern.ch/user/s/shsong/CMSSW_10_6_20/src/flashggFinalFit/Plots/FinalResults/'
+ol = '/afs/cern.ch/user/s/shsong/CMSSW_10_6_20/src/flashggFinalFit/Plots/FinalResults_SL/'
  
 # GET limits from root file
 def getLimits(file_name):
@@ -81,20 +81,20 @@ def plotUpperLimits(labels,values,resultType):
     up2s = [ ]
     nonBRvals = [] 
     for i in range(N):
-        file_name = "/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/combined_limit/higgsCombine%s_combined.AsymptoticLimits.mH125.root"%(labels[i])
+        file_name = "/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/combined_limit/higgsCombine%s_combined.AsymptoticLimits.mH125.root"%(labels[i])
         print"file: ",file_name
         limit = getLimits(file_name)
         up2s.append(limit[4])
 
         campaignBRdict = {
             "HHWWgg_v2-3": 3.4916, # (1 / BR) of qqlnu. Electron and Muon decays only 
-            "HHWWgg_v2-7": 2.3079, # (1 / BR) of qqlnu. Electron, Muon, all Tau decays INCLUDED
+            "HHWWgg_2qlv": 2.3079, # (1 / BR) of qqlnu. Electron, Muon, all Tau decays INCLUDED
             "HHWWgg_4q": 1.483459427384661 # (1 / BR) of qqqq. 
             # "HHWWgg_v2-7": 2.2779 # (1 / BR) of qqlnu. Electron, Muon, all Tau decays INCLUDED
         }
 
         # HHWWgg_qqlnu_factor = campaignBRdict["HHWWgg_v2-7"]
-        WWgg_factor = campaignBRdict['HHWWgg_4q']
+        WWgg_factor = campaignBRdict['HHWWgg_2qlv']
 
         HHWWgg_WWgg_factor = 1030.7153 
 
@@ -259,8 +259,8 @@ def plotUpperLimits(labels,values,resultType):
     c.Close()
 
 def main():
-    labels = ['M300','M500','M1000','M1500','M2000','M2600','M3000']
-    values = [300,500,1000,1500,2000,2600,3000]    
+    labels = ['M300','M500','M700','M1000','M1500','M2000','M2600','M3000']
+    values = [300,500,700,1000,1500,2000,2600,3000]    
 ####labels = ['M300','M500','M700','M1000','M1500','M2000','M2600','M3000']
 ####values = [300,500,700,1000,1500,2000,2600,3000]
     resultType = args.resultType
