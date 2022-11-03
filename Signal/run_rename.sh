@@ -30,27 +30,43 @@ fi
 if [ ${WhichSamples} -eq 1 ]
   then
     echo ${whichsample}
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_1jet
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_2jets
+    mkdir ws_gghh_M300_1jet_passed100cut
+    mkdir ws_gghh_M300_1jet_unpassed100cut
+    mkdir ws_gghh_M300_2jets_passed100cut
+    mkdir ws_gghh_M300_2jets_unpassed100cut
 
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_1jet
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_2jets
+    mkdir ws_gghh_M500_1jet_passed100cut
+    mkdir ws_gghh_M500_1jet_unpassed100cut
+    mkdir ws_gghh_M500_2jets_passed100cut
+    mkdir ws_gghh_M500_2jets_unpassed100cut
 
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_1jet
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_2jets
+    mkdir ws_gghh_M700_1jet_passed100cut
+    mkdir ws_gghh_M700_1jet_unpassed100cut
+    mkdir ws_gghh_M700_2jets_passed100cut
+    mkdir ws_gghh_M700_2jets_unpassed100cut
 
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_1jet
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_2jets
+    mkdir ws_gghh_M1000_1jet_passed100cut
+    mkdir ws_gghh_M1000_1jet_unpassed100cut
+    mkdir ws_gghh_M1000_2jets_passed100cut
+    mkdir ws_gghh_M1000_2jets_unpassed100cut
 
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_1jet
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_2jets
+    mkdir ws_gghh_M1500_1jet_passed100cut
+    mkdir ws_gghh_M1500_1jet_unpassed100cut
+    mkdir ws_gghh_M1500_2jets_passed100cut
+    mkdir ws_gghh_M1500_2jets_unpassed100cut
 
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_1jet
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_2jets
+    mkdir ws_gghh_M2000_1jet_passed100cut
+    mkdir ws_gghh_M2000_1jet_unpassed100cut
+    mkdir ws_gghh_M2000_2jets_passed100cut
+    mkdir ws_gghh_M2000_2jets_unpassed100cut
 
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_1jet
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_2jets
+    mkdir ws_gghh_M2600_1jet_passed100cut
+    mkdir ws_gghh_M2600_1jet_unpassed100cut
+    mkdir ws_gghh_M2600_2jets_passed100cut
+    mkdir ws_gghh_M2600_2jets_unpassed100cut
 
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_1jet
-    mkdir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_2jets
+    mkdir ws_gghh_M3000_1jet_passed100cut
+    mkdir ws_gghh_M3000_1jet_unpassed100cut
+    mkdir ws_gghh_M3000_2jets_passed100cut
+    mkdir ws_gghh_M3000_2jets_unpassed100cut
 fi

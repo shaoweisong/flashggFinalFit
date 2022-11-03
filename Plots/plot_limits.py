@@ -10,9 +10,12 @@
 # python plot_limits.py -AC # compare to ATLAS 2016 semileptonic result 
 # python plot_limits.py -CMSC # compare to CMS 2016 results 
 # python plot_limits.py -SM # standard model point only 
+# for running batch to not show the plots
 
 import ROOT
 from ROOT import TFile, TTree, TCanvas, TGraph, TMultiGraph, TGraphErrors, TLegend, kBlack, TLatex, gPad, TH1F, TGraphAsymmErrors
+ROOT.PyConfig.IgnoreCommandLineOptions = True  # stop PyRoot hijacking -h WHY DOESNT THIS ALWAYS WORK
+ROOT.gROOT.SetBatch(True)  # Don't want to plot these to screen as we generate them
 import CMS_lumi, tdrstyle
 import subprocess # to execute shell command
 from array import array 
@@ -81,22 +84,32 @@ def plotUpperLimits(labels,values,resultType):
     up2s = [ ]
     nonBRvals = [] 
     for i in range(N):
-        file_name = "/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/combined_limit/higgsCombine%s_combined.AsymptoticLimits.mH125.root"%(labels[i])
+        # file_name = "/eos/user/z/zhenxuan/hhwwgg_root/hhwwgg_root_FH_SL/higgsCombine%s_SL_FH.AsymptoticLimits.mH125.root"%(labels[i]) # all
+        # file_name = "/eos/user/z/zhenxuan/hhwwgg_root/hhwwgg_root_FH/1jet_limit/higgsCombine%s_1jet.AsymptoticLimits.mH125.root"%(labels[i]) # FH
+        # file_name = "/eos/user/z/zhenxuan/hhwwgg_root/hhwwgg_root_FH/2jets_3jets_limit/higgsCombine%s_2jets_3jets.AsymptoticLimits.mH125.root"%(labels[i]) # FH
+        # file_name = "/eos/user/z/zhenxuan/hhwwgg_root/hhwwgg_root_FH/4jets_limit/higgsCombine%s_4jets.AsymptoticLimits.mH125.root"%(labels[i]) # FH
+        # file_name = "/eos/user/z/zhenxuan/hhwwgg_root/hhwwgg_root_FH/combined_limit/higgsCombine%s_FH.AsymptoticLimits.mH125.root"%(labels[i]) # FH
+        file_name = "/eos/user/s/shsong/hhwwggSL_root/SL/combined_limit/higgsCombine%s_SL.AsymptoticLimits.mH125.root"%(labels[i]) # SL
         print"file: ",file_name
         limit = getLimits(file_name)
         up2s.append(limit[4])
 
         campaignBRdict = {
             "HHWWgg_v2-3": 3.4916, # (1 / BR) of qqlnu. Electron and Muon decays only 
-            "HHWWgg_2qlv": 2.3079, # (1 / BR) of qqlnu. Electron, Muon, all Tau decays INCLUDED
-            "HHWWgg_4q": 1.483459427384661 # (1 / BR) of qqqq. 
+            "HHWWgg_2qlv": 2.2675931326, # (1 / BR) of qqlnu. Electron, Muon, all Tau decays INCLUDED
+            "HHWWgg_4q": 2.200651872696426, # (1 / BR) of qqqq. ,\
+            "HHWWgg_all": 1.1168105302903417, # (1 / BR) of qqqq. 
+            "HHWWgg_null": 1 # (1 / BR) of qqqq. 
             # "HHWWgg_v2-7": 2.2779 # (1 / BR) of qqlnu. Electron, Muon, all Tau decays INCLUDED
         }
 
         # HHWWgg_qqlnu_factor = campaignBRdict["HHWWgg_v2-7"]
-        WWgg_factor = campaignBRdict['HHWWgg_2qlv']
+        WWgg_factor = campaignBRdict['HHWWgg_null']
+        # WWgg_factor = campaignBRdict['HHWWgg_4q']
+        # WWgg_factor = campaignBRdict['HHWWgg_2qlv']
 
-        HHWWgg_WWgg_factor = 1030.7153 
+        # HHWWgg_WWgg_factor = 1030.7153 
+        HHWWgg_WWgg_factor = 1 # attention: for already added br
 
         lumiRescaledict = {
             "default": 1,
@@ -260,12 +273,11 @@ def plotUpperLimits(labels,values,resultType):
 
 def main():
     labels = ['M300','M500','M700','M1000','M1500','M2000','M2600','M3000']
-    values = [300,500,700,1000,1500,2000,2600,3000]    
-####labels = ['M300','M500','M700','M1000','M1500','M2000','M2600','M3000']
-####values = [300,500,700,1000,1500,2000,2600,3000]
+    values = [300,500,700,1000,1500,2000,2600,3000]
     resultType = args.resultType
     plotUpperLimits(labels,values,resultType)
 if __name__ == '__main__':
     main()
 
+ 
  

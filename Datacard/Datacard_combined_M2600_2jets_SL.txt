@@ -1,0 +1,28 @@
+Combination of SL_2jets_passed100cut_M2600=Datacard_M2600_2jets_SL_passed100cut.txt  SL_2jets_unpassed100cut_M2600=Datacard_M2600_2jets_SL_unpassed100cut.txt
+imax 2 number of bins
+jmax 1 number of processes minus 1
+kmax 0 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes bkg_mass                       SL_2jets_passed100cut_M2600    /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_passed100cut/CMS-HGG_multipdf_RECO_untagged_2jets_SL_passed100cut_2017.root multipdf:CMS_hgg_RECO_untagged_2jets_SL_passed100cut_2017_13TeV_bkgshape
+shapes data_obs                       SL_2jets_passed100cut_M2600    /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_passed100cut/CMS-HGG_multipdf_RECO_untagged_2jets_SL_passed100cut_2017.root multipdf:roohist_data_mass_RECO_untagged_2jets_SL_passed100cut
+shapes gghh_2017_hgg                  SL_2jets_passed100cut_M2600    /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_2jets_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_passed100cut_2017.root wsig_13TeV:hggpdfsmrel_gghh_2017_RECO_untagged_2jets_SL_passed100cut_13TeV
+shapes bkg_mass                       SL_2jets_unpassed100cut_M2600  /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_unpassed100cut/CMS-HGG_multipdf_RECO_untagged_2jets_SL_unpassed100cut_2017.root multipdf:CMS_hgg_RECO_untagged_2jets_SL_unpassed100cut_2017_13TeV_bkgshape
+shapes data_obs                       SL_2jets_unpassed100cut_M2600  /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_unpassed100cut/CMS-HGG_multipdf_RECO_untagged_2jets_SL_unpassed100cut_2017.root multipdf:roohist_data_mass_RECO_untagged_2jets_SL_unpassed100cut
+shapes gghh_2017_hgg                  SL_2jets_unpassed100cut_M2600  /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_2jets_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_unpassed100cut_2017.root wsig_13TeV:hggpdfsmrel_gghh_2017_RECO_untagged_2jets_SL_unpassed100cut_13TeV
+----------------------------------------------------------------------------------------------------------------------------------
+bin          SL_2jets_passed100cut_M2600    SL_2jets_unpassed100cut_M2600
+observation  -1                             -1                           
+----------------------------------------------------------------------------------------------------------------------------------
+bin          SL_2jets_passed100cut_M2600    SL_2jets_passed100cut_M2600    SL_2jets_unpassed100cut_M2600  SL_2jets_unpassed100cut_M2600
+process      gghh_2017_hgg                  bkg_mass                       gghh_2017_hgg                  bkg_mass                     
+process      0                              1                              0                              1                            
+rate         41480                          1                              41480                          1                            
+----------------------------------------------------------------------------------------------------------------------------------
+CMS_wwgg_br_HH_WWgg  rateParam SL_2jets_passed100cut_M2600 gghh_2017_hgg 0.000970198  
+CMS_wwgg_br_WW_2Qlnu  rateParam SL_2jets_passed100cut_M2600 gghh_2017_hgg 0.441  
+CMS_wwgg_br_HH_WWgg  rateParam SL_2jets_unpassed100cut_M2600 gghh_2017_hgg 0.000970198  
+CMS_wwgg_br_WW_2Qlnu  rateParam SL_2jets_unpassed100cut_M2600 gghh_2017_hgg 0.441  
+pdfindex_RECO_untagged_2jets_SL_unpassed100cut_2017_13TeV  discrete
+pdfindex_RECO_untagged_2jets_SL_passed100cut_2017_13TeV  discrete
+nuisance edit  freeze CMS_wwgg_br_HH_WWgg
+nuisance edit  freeze CMS_wwgg_br_WW_2Qlnu

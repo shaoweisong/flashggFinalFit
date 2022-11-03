@@ -167,7 +167,7 @@ if [ ${WhichSamples} -eq 5 ]
     
     cp outdir_dcb_2017_M300_1jet/signalFit/output/CMS-HGG_sigfit_dcb_2017_M300_1jet_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh_M300_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
     cp outdir_dcb_2017_M500_1jet/signalFit/output/CMS-HGG_sigfit_dcb_2017_M500_1jet_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh_M500_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
-    #cp outdir_dcb_2017_M700_1jet/signalFit/output/CMS-HGG_sigfit_dcb_2017_M700_1jet_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh_M700_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
+    cp outdir_dcb_2017_M700_1jet/signalFit/output/CMS-HGG_sigfit_dcb_2017_M700_1jet_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh_M700_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
     cp outdir_dcb_2017_M1000_1jet/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1000_1jet_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh_M1000_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
     cp outdir_dcb_2017_M1500_1jet/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1500_1jet_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh_M1500_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
     cp outdir_dcb_2017_M2000_1jet/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2000_1jet_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh_M2000_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
@@ -259,29 +259,45 @@ if [ ${WhichSamples} -eq 7 ]
     # already saved different mass point root file into different directory
     # can't run parallel since some operation may have confliction attention
     
-    python RunSignalScripts.py --inputConfig config_M300_1jet_SL_2017.py --mode 'fTest' >signal_ftest_M300_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M300_2jets_SL_2017.py --mode 'fTest' >signal_ftest_M300_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M300_1jet_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M300_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M300_1jet_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M300_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M300_2jets_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M300_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M300_2jets_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M300_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M500_1jet_SL_2017.py --mode 'fTest' >signal_ftest_M500_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M500_2jets_SL_2017.py --mode 'fTest' >signal_ftest_M500_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M500_1jet_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M500_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M500_1jet_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M500_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M500_2jets_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M500_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M500_2jets_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M500_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M700_1jet_SL_2017.py --mode 'fTest' >signal_ftest_M700_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M700_2jets_SL_2017.py --mode 'fTest' >signal_ftest_M700_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M700_1jet_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M700_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M700_1jet_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M700_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M700_2jets_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M700_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M700_2jets_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M700_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M1000_1jet_SL_2017.py --mode 'fTest' >signal_ftest_M1000_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M1000_2jets_SL_2017.py --mode 'fTest' >signal_ftest_M1000_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1000_1jet_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M1000_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1000_1jet_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M1000_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1000_2jets_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M1000_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1000_2jets_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M1000_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M1500_1jet_SL_2017.py --mode 'fTest' >signal_ftest_M1500_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M1500_2jets_SL_2017.py --mode 'fTest' >signal_ftest_M1500_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1500_1jet_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M1500_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1500_1jet_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M1500_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1500_2jets_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M1500_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1500_2jets_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M1500_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M2000_1jet_SL_2017.py --mode 'fTest' >signal_ftest_M2000_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M2000_2jets_SL_2017.py --mode 'fTest' >signal_ftest_M2000_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2000_1jet_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M2000_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2000_1jet_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M2000_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2000_2jets_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M2000_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2000_2jets_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M2000_2jets_unpassed100cut_SL.log 2>&1 
+    
+    python RunSignalScripts.py --inputConfig config_M2600_1jet_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M2600_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2600_1jet_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M2600_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2600_2jets_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M2600_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2600_2jets_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M2600_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M2600_1jet_SL_2017.py --mode 'fTest' >signal_ftest_M2600_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M2600_2jets_SL_2017.py --mode 'fTest' >signal_ftest_M2600_2jets_SL.log 2>&1 
-
-    python RunSignalScripts.py --inputConfig config_M3000_1jet_SL_2017.py --mode 'fTest' >signal_ftest_M3000_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M3000_2jets_SL_2017.py --mode 'fTest' >signal_ftest_M3000_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M3000_1jet_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M3000_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M3000_1jet_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M3000_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M3000_2jets_passed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M3000_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M3000_2jets_unpassed100cut_SL_2017.py --mode 'fTest' >signal_ftest_M3000_2jets_unpassed100cut_SL.log 2>&1 
 fi
 
 if [ ${WhichSamples} -eq 8 ]
@@ -289,128 +305,236 @@ if [ ${WhichSamples} -eq 8 ]
     echo ${whichsample}
     # already saved different mass point root file into different directory
     # can't run parallel since some operation may have confliction attention
-    python RunSignalScripts.py --inputConfig config_M300_1jet_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M300_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M300_2jets_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M300_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M300_1jet_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M300_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M300_1jet_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M300_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M300_2jets_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M300_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M300_2jets_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M300_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M500_1jet_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M500_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M500_2jets_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M500_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M500_1jet_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M500_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M500_1jet_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M500_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M500_2jets_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M500_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M500_2jets_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M500_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M700_1jet_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M700_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M700_2jets_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M700_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M700_1jet_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M700_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M700_1jet_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M700_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M700_2jets_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M700_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M700_2jets_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M700_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M1000_1jet_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M1000_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M1000_2jets_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M1000_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1000_1jet_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M1000_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1000_1jet_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics"  >signal_SignalFit_M1000_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1000_2jets_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M1000_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1000_2jets_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M1000_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M1500_1jet_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M1500_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M1500_2jets_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M1500_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1500_1jet_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M1500_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1500_1jet_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M1500_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1500_2jets_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M1500_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M1500_2jets_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M1500_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M2000_1jet_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M2000_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M2000_2jets_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M2000_2jets_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2000_1jet_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M2000_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2000_1jet_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M2000_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2000_2jets_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M2000_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2000_2jets_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M2000_2jets_unpassed100cut_SL.log 2>&1 
+    
+    python RunSignalScripts.py --inputConfig config_M2600_1jet_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M2600_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2600_1jet_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M2600_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2600_2jets_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M2600_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M2600_2jets_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M2600_2jets_unpassed100cut_SL.log 2>&1 
 
-    python RunSignalScripts.py --inputConfig config_M2600_1jet_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M2600_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M2600_2jets_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M2600_2jets_SL.log 2>&1 
-
-    python RunSignalScripts.py --inputConfig config_M3000_1jet_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M3000_1jet_SL.log 2>&1 
-    python RunSignalScripts.py --inputConfig config_M3000_2jets_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_signalFit_M3000_2jets_SL.log 2>&1 
-
+    python RunSignalScripts.py --inputConfig config_M3000_1jet_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M3000_1jet_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M3000_1jet_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M3000_1jet_unpassed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M3000_2jets_passed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M3000_2jets_passed100cut_SL.log 2>&1 
+    python RunSignalScripts.py --inputConfig config_M3000_2jets_unpassed100cut_SL_2017.py --mode 'signalFit' --modeOpts "--skipSystematics" >signal_SignalFit_M3000_2jets_unpassed100cut_SL.log 2>&1
 fi
 
 if [ ${WhichSamples} -eq 9 ]
   then
     echo 'run packaged'
     # already saved different mass point root file into different directory
-    python RunPackager.py --cats RECO_untagged_1jet --exts dcb_2017_M300_1jet_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M300_1jet_SL
-    python RunPackager.py --cats RECO_untagged_2jets --exts dcb_2017_M300_2jets_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M300_2jets_SL
+    
+    python RunPackager.py --cats RECO_untagged_1jet_SL_passed100cut --exts dcb_2017_M300_1jet_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M300_1jet_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_1jet_SL_unpassed100cut --exts dcb_2017_M300_1jet_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M300_1jet_unpassed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_passed100cut --exts dcb_2017_M300_2jets_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M300_2jets_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_unpassed100cut --exts dcb_2017_M300_2jets_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M300_2jets_unpassed100cut_SL
+
+    python RunPackager.py --cats RECO_untagged_1jet_SL_passed100cut --exts dcb_2017_M500_1jet_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M500_1jet_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_1jet_SL_unpassed100cut --exts dcb_2017_M500_1jet_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M500_1jet_unpassed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_passed100cut --exts dcb_2017_M500_2jets_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M500_2jets_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_unpassed100cut --exts dcb_2017_M500_2jets_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M500_2jets_unpassed100cut_SL
+
+    python RunPackager.py --cats RECO_untagged_1jet_SL_passed100cut --exts dcb_2017_M700_1jet_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M700_1jet_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_1jet_SL_unpassed100cut --exts dcb_2017_M700_1jet_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M700_1jet_unpassed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_passed100cut --exts dcb_2017_M700_2jets_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M700_2jets_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_unpassed100cut --exts dcb_2017_M700_2jets_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M700_2jets_unpassed100cut_SL
+
+    python RunPackager.py --cats RECO_untagged_1jet_SL_passed100cut --exts dcb_2017_M1000_1jet_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1000_1jet_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_1jet_SL_unpassed100cut --exts dcb_2017_M1000_1jet_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1000_1jet_unpassed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_passed100cut --exts dcb_2017_M1000_2jets_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1000_2jets_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_unpassed100cut --exts dcb_2017_M1000_2jets_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1000_2jets_unpassed100cut_SL
+
+    python RunPackager.py --cats RECO_untagged_1jet_SL_passed100cut --exts dcb_2017_M1500_1jet_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1500_1jet_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_1jet_SL_unpassed100cut --exts dcb_2017_M1500_1jet_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1500_1jet_unpassed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_passed100cut --exts dcb_2017_M1500_2jets_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1500_2jets_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_unpassed100cut --exts dcb_2017_M1500_2jets_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1500_2jets_unpassed100cut_SL
+
+    python RunPackager.py --cats RECO_untagged_1jet_SL_passed100cut --exts dcb_2017_M2000_1jet_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2000_1jet_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_1jet_SL_unpassed100cut --exts dcb_2017_M2000_1jet_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2000_1jet_unpassed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_passed100cut --exts dcb_2017_M2000_2jets_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2000_2jets_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_unpassed100cut --exts dcb_2017_M2000_2jets_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2000_2jets_unpassed100cut_SL
+
+    python RunPackager.py --cats RECO_untagged_1jet_SL_passed100cut --exts dcb_2017_M2600_1jet_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2600_1jet_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_1jet_SL_unpassed100cut --exts dcb_2017_M2600_1jet_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2600_1jet_unpassed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_passed100cut --exts dcb_2017_M2600_2jets_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2600_2jets_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_unpassed100cut --exts dcb_2017_M2600_2jets_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2600_2jets_unpassed100cut_SL
+
+    python RunPackager.py --cats RECO_untagged_1jet_SL_passed100cut --exts dcb_2017_M3000_1jet_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M3000_1jet_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_1jet_SL_unpassed100cut --exts dcb_2017_M3000_1jet_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M3000_1jet_unpassed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_passed100cut --exts dcb_2017_M3000_2jets_passed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M3000_2jets_passed100cut_SL
+    python RunPackager.py --cats RECO_untagged_2jets_SL_unpassed100cut --exts dcb_2017_M3000_2jets_unpassed100cut_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M3000_2jets_unpassed100cut_SL
+
 
     
-    python RunPackager.py --cats RECO_untagged_1jet --exts dcb_2017_M500_1jet_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M500_1jet_SL
-    python RunPackager.py --cats RECO_untagged_2jets --exts dcb_2017_M500_2jets_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M500_2jets_SL
-
-
-    python RunPackager.py --cats RECO_untagged_1jet --exts dcb_2017_M700_1jet_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M700_1jet_SL
-    python RunPackager.py --cats RECO_untagged_2jets --exts dcb_2017_M700_2jets_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M700_2jets_SL
-
-
-    python RunPackager.py --cats RECO_untagged_1jet --exts dcb_2017_M1000_1jet_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1000_1jet_SL
-    python RunPackager.py --cats RECO_untagged_2jets --exts dcb_2017_M1000_2jets_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1000_2jets_SL
-
-
-    python RunPackager.py --cats RECO_untagged_1jet --exts dcb_2017_M1500_1jet_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1500_1jet_SL
-    python RunPackager.py --cats RECO_untagged_2jets --exts dcb_2017_M1500_2jets_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M1500_2jets_SL
-
-
-    python RunPackager.py --cats RECO_untagged_1jet --exts dcb_2017_M2000_1jet_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2000_1jet_SL
-    python RunPackager.py --cats RECO_untagged_2jets --exts dcb_2017_M2000_2jets_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2000_2jets_SL
-
-
-    python RunPackager.py --cats RECO_untagged_1jet --exts dcb_2017_M2600_1jet_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2600_1jet_SL
-    python RunPackager.py --cats RECO_untagged_2jets --exts dcb_2017_M2600_2jets_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M2600_2jets_SL
-
-
-    python RunPackager.py --cats RECO_untagged_1jet --exts dcb_2017_M3000_1jet_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M3000_1jet_SL
-    python RunPackager.py --cats RECO_untagged_2jets --exts dcb_2017_M3000_2jets_SL,  --batch local  --massPoints 125 --year 2017 --outputExt packaged_M3000_2jets_SL
-
-
 fi
 
 if [ ${WhichSamples} -eq 10 ]
   then
     echo 'run SL plotter'
     # already saved different mass point root file into different directory
-    python RunPlotter.py --cats RECO_untagged_1jet --procs all --years 2017 --ext packaged_M300_1jet_SL
-    python RunPlotter.py --cats RECO_untagged_2jets --procs all --years 2017 --ext packaged_M300_2jets_SL
 
-    python RunPlotter.py --cats RECO_untagged_1jet --procs all --years 2017 --ext packaged_M500_1jet_SL
-    python RunPlotter.py --cats RECO_untagged_2jets --procs all --years 2017 --ext packaged_M500_2jets_SL
-    
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_passed100cut --procs all --years 2017 --ext packaged_M300_1jet_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_unpassed100cut --procs all --years 2017 --ext packaged_M300_1jet_unpassed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_passed100cut --procs all --years 2017 --ext packaged_M300_2jets_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_unpassed100cut --procs all --years 2017 --ext packaged_M300_2jets_unpassed100cut_SL
 
-    python RunPlotter.py --cats RECO_untagged_1jet --procs all --years 2017 --ext packaged_M700_1jet_SL
-    python RunPlotter.py --cats RECO_untagged_2jets --procs all --years 2017 --ext packaged_M700_2jets_SL
-    
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_passed100cut --procs all --years 2017 --ext packaged_M500_1jet_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_unpassed100cut --procs all --years 2017 --ext packaged_M500_1jet_unpassed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_passed100cut --procs all --years 2017 --ext packaged_M500_2jets_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_unpassed100cut --procs all --years 2017 --ext packaged_M500_2jets_unpassed100cut_SL
 
-    python RunPlotter.py --cats RECO_untagged_1jet --procs all --years 2017 --ext packaged_M1000_1jet_SL
-    python RunPlotter.py --cats RECO_untagged_2jets --procs all --years 2017 --ext packaged_M1000_2jets_SL
-    
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_passed100cut --procs all --years 2017 --ext packaged_M700_1jet_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_unpassed100cut --procs all --years 2017 --ext packaged_M700_1jet_unpassed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_passed100cut --procs all --years 2017 --ext packaged_M700_2jets_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_unpassed100cut --procs all --years 2017 --ext packaged_M700_2jets_unpassed100cut_SL
 
-    python RunPlotter.py --cats RECO_untagged_1jet --procs all --years 2017 --ext packaged_M1500_1jet_SL
-    python RunPlotter.py --cats RECO_untagged_2jets --procs all --years 2017 --ext packaged_M1500_2jets_SL
-    
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_passed100cut --procs all --years 2017 --ext packaged_M1000_1jet_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_unpassed100cut --procs all --years 2017 --ext packaged_M1000_1jet_unpassed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_passed100cut --procs all --years 2017 --ext packaged_M1000_2jets_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_unpassed100cut --procs all --years 2017 --ext packaged_M1000_2jets_unpassed100cut_SL
 
-    python RunPlotter.py --cats RECO_untagged_1jet --procs all --years 2017 --ext packaged_M2000_1jet_SL
-    python RunPlotter.py --cats RECO_untagged_2jets --procs all --years 2017 --ext packaged_M2000_2jets_SL
-    
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_passed100cut --procs all --years 2017 --ext packaged_M1500_1jet_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_unpassed100cut --procs all --years 2017 --ext packaged_M1500_1jet_unpassed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_passed100cut --procs all --years 2017 --ext packaged_M1500_2jets_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_unpassed100cut --procs all --years 2017 --ext packaged_M1500_2jets_unpassed100cut_SL
 
-    python RunPlotter.py --cats RECO_untagged_1jet --procs all --years 2017 --ext packaged_M2600_1jet_SL
-    python RunPlotter.py --cats RECO_untagged_2jets --procs all --years 2017 --ext packaged_M2600_2jets_SL
-    
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_passed100cut --procs all --years 2017 --ext packaged_M2000_1jet_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_unpassed100cut --procs all --years 2017 --ext packaged_M2000_1jet_unpassed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_passed100cut --procs all --years 2017 --ext packaged_M2000_2jets_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_unpassed100cut --procs all --years 2017 --ext packaged_M2000_2jets_unpassed100cut_SL
 
-    python RunPlotter.py --cats RECO_untagged_1jet --procs all --years 2017 --ext packaged_M3000_1jet_SL
-    python RunPlotter.py --cats RECO_untagged_2jets --procs all --years 2017 --ext packaged_M3000_2jets_SL
-    
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_passed100cut --procs all --years 2017 --ext packaged_M2600_1jet_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_unpassed100cut --procs all --years 2017 --ext packaged_M2600_1jet_unpassed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_passed100cut --procs all --years 2017 --ext packaged_M2600_2jets_passed100cut_SL
+    python RunPlotter.py --cats RECO_u
+    ntagged_2jets_SL_unpassed100cut --procs all --years 2017 --ext packaged_M2600_2jets_unpassed100cut_SL
+
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_passed100cut --procs all --years 2017 --ext packaged_M3000_1jet_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_1jet_SL_unpassed100cut --procs all --years 2017 --ext packaged_M3000_1jet_unpassed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_passed100cut --procs all --years 2017 --ext packaged_M3000_2jets_passed100cut_SL
+    python RunPlotter.py --cats RECO_untagged_2jets_SL_unpassed100cut --procs all --years 2017 --ext packaged_M3000_2jets_unpassed100cut_SL
 
 fi
 if [ ${WhichSamples} -eq 11 ]
   then
   #attention: need to copy all the CMS_multipdf* to your workspace dir
     echo 'run SL copy'
-    
-    cp outdir_dcb_2017_M300_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M300_1jet_SL_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
-    cp outdir_dcb_2017_M500_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M500_1jet_SL_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
-    cp outdir_dcb_2017_M700_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M700_1jet_SL_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
-    cp outdir_dcb_2017_M1000_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1000_1jet_SL_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
-    cp outdir_dcb_2017_M1500_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1500_1jet_SL_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
-    cp outdir_dcb_2017_M2000_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2000_1jet_SL_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
-    cp outdir_dcb_2017_M2600_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2600_1jet_SL_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
-    cp outdir_dcb_2017_M3000_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M3000_1jet_SL_gghh_2017_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_2017.root
 
-    cp outdir_dcb_2017_M300_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M300_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_2017.root
-    cp outdir_dcb_2017_M500_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M500_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_2017.root
-    cp outdir_dcb_2017_M700_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M700_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_2017.root
-    cp outdir_dcb_2017_M1000_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1000_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_2017.root
-    cp outdir_dcb_2017_M1500_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1500_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_2017.root
-    cp outdir_dcb_2017_M2000_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2000_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_2017.root
-    cp outdir_dcb_2017_M2600_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2600_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_2017.root
-    cp outdir_dcb_2017_M3000_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M3000_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_2017.root
+
+    cp outdir_dcb_2017_M300_1jet_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M300_1jet_passed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_1jet_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M300_1jet_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M300_1jet_unpassed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_1jet_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_unpassed100cut_2017.root
+
+    cp outdir_dcb_2017_M300_2jets_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M300_2jets_passed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_2jets_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M300_2jets_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M300_2jets_unpassed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_2jets_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_unpassed100cut_2017.root
+
+    
+    cp outdir_dcb_2017_M500_1jet_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M500_1jet_passed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_1jet_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M500_1jet_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M500_1jet_unpassed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_1jet_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_unpassed100cut_2017.root
+
+    cp outdir_dcb_2017_M500_2jets_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M500_2jets_passed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_2jets_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M500_2jets_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M500_2jets_unpassed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_2jets_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_unpassed100cut_2017.root
+
+    
+    cp outdir_dcb_2017_M700_1jet_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M700_1jet_passed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_1jet_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M700_1jet_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M700_1jet_unpassed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_1jet_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_unpassed100cut_2017.root
+
+    cp outdir_dcb_2017_M700_2jets_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M700_2jets_passed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_2jets_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M700_2jets_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M700_2jets_unpassed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_2jets_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_unpassed100cut_2017.root
+
+
+    cp outdir_dcb_2017_M1000_1jet_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1000_1jet_passed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_1jet_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M1000_1jet_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1000_1jet_unpassed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_1jet_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_unpassed100cut_2017.root
+
+    cp outdir_dcb_2017_M1000_2jets_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1000_2jets_passed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_2jets_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M1000_2jets_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1000_2jets_unpassed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_2jets_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_unpassed100cut_2017.root
+
+
+    cp outdir_dcb_2017_M1500_1jet_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1500_1jet_passed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_1jet_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M1500_1jet_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1500_1jet_unpassed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_1jet_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_unpassed100cut_2017.root
+
+    cp outdir_dcb_2017_M1500_2jets_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1500_2jets_passed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_2jets_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M1500_2jets_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1500_2jets_unpassed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_2jets_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_unpassed100cut_2017.root
+
+
+    cp outdir_dcb_2017_M2000_1jet_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2000_1jet_passed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_1jet_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M2000_1jet_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2000_1jet_unpassed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_1jet_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_unpassed100cut_2017.root
+
+    cp outdir_dcb_2017_M2000_2jets_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2000_2jets_passed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_2jets_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M2000_2jets_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2000_2jets_unpassed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_2jets_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_unpassed100cut_2017.root
+
+
+    cp outdir_dcb_2017_M2600_1jet_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2600_1jet_passed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_1jet_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M2600_1jet_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2600_1jet_unpassed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_1jet_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_unpassed100cut_2017.root
+
+    cp outdir_dcb_2017_M2600_2jets_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2600_2jets_passed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_2jets_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M2600_2jets_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2600_2jets_unpassed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_2jets_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_unpassed100cut_2017.root
+
+
+    cp outdir_dcb_2017_M3000_1jet_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M3000_1jet_passed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_1jet_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M3000_1jet_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M3000_1jet_unpassed100cut_SL_gghh_2017_RECO_untagged_1jet_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_1jet_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_unpassed100cut_2017.root
+
+    cp outdir_dcb_2017_M3000_2jets_passed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M3000_2jets_passed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_2jets_passed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_passed100cut_2017.root
+
+    cp outdir_dcb_2017_M3000_2jets_unpassed100cut_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M3000_2jets_unpassed100cut_SL_gghh_2017_RECO_untagged_2jets_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_2jets_unpassed100cut/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_unpassed100cut_2017.root
+  
+    # cp outdir_dcb_2017_M500_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M500_1jet_SL_gghh_2017_RECO_untagged_1jet_SL.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_2017.root
+    # cp outdir_dcb_2017_M700_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M700_1jet_SL_gghh_2017_RECO_untagged_1jet_SL.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_2017.root
+    # cp outdir_dcb_2017_M1000_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1000_1jet_SL_gghh_2017_RECO_untagged_1jet_SL.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_2017.root
+    # cp outdir_dcb_2017_M1500_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1500_1jet_SL_gghh_2017_RECO_untagged_1jet_SL.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_2017.root
+    # cp outdir_dcb_2017_M2000_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2000_1jet_SL_gghh_2017_RECO_untagged_1jet_SL.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_2017.root
+    # cp outdir_dcb_2017_M2600_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2600_1jet_SL_gghh_2017_RECO_untagged_1jet_SL.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_2017.root
+    # cp outdir_dcb_2017_M3000_1jet_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M3000_1jet_SL_gghh_2017_RECO_untagged_1jet_SL.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_1jet/CMS-HGG_sigfit_packaged_RECO_untagged_1jet_SL_2017.root
+
+    # cp outdir_dcb_2017_M300_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M300_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_2017.root
+    # cp outdir_dcb_2017_M500_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M500_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_2017.root
+    # cp outdir_dcb_2017_M700_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M700_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_2017.root
+    # cp outdir_dcb_2017_M1000_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1000_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_2017.root
+    # cp outdir_dcb_2017_M1500_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M1500_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_2017.root
+    # cp outdir_dcb_2017_M2000_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2000_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_2017.root
+    # cp outdir_dcb_2017_M2600_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M2600_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_2017.root
+    # cp outdir_dcb_2017_M3000_2jets_SL/signalFit/output/CMS-HGG_sigfit_dcb_2017_M3000_2jets_SL_gghh_2017_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_2jets/CMS-HGG_sigfit_packaged_RECO_untagged_2jets_SL_2017.root
 
 fi
 
@@ -437,22 +561,22 @@ if [ ${WhichSamples} -eq 12 ]
     cp outdir_packaged_M2600_1jet/Plots/smodel_RECO_untagged_1jet_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_1jet/smodel_RECO_untagged_1jet_2017.pdf
     cp outdir_packaged_M3000_1jet/Plots/smodel_RECO_untagged_1jet_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_1jet/smodel_RECO_untagged_1jet_2017.pdf
 
-    cp outdir_packaged_M300_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_2jets/smodel_RECO_untagged_2jets_2017.png
-    cp outdir_packaged_M500_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_2jets/smodel_RECO_untagged_2jets_2017.png
-    cp outdir_packaged_M700_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_2jets/smodel_RECO_untagged_2jets_2017.png
-    cp outdir_packaged_M1000_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_2jets/smodel_RECO_untagged_2jets_2017.png
-    cp outdir_packaged_M1500_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_2jets/smodel_RECO_untagged_2jets_2017.png
-    cp outdir_packaged_M2000_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_2jets/smodel_RECO_untagged_2jets_2017.png
-    cp outdir_packaged_M2600_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_2jets/smodel_RECO_untagged_2jets_2017.png
-    cp outdir_packaged_M3000_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_2jets/smodel_RECO_untagged_2jets_2017.png
+    # cp outdir_packaged_M300_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_2jets/smodel_RECO_untagged_2jets_2017.png
+    # cp outdir_packaged_M500_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_2jets/smodel_RECO_untagged_2jets_2017.png
+    # cp outdir_packaged_M700_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_2jets/smodel_RECO_untagged_2jets_2017.png
+    # cp outdir_packaged_M1000_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_2jets/smodel_RECO_untagged_2jets_2017.png
+    # cp outdir_packaged_M1500_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_2jets/smodel_RECO_untagged_2jets_2017.png
+    # cp outdir_packaged_M2000_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_2jets/smodel_RECO_untagged_2jets_2017.png
+    # cp outdir_packaged_M2600_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_2jets/smodel_RECO_untagged_2jets_2017.png
+    # cp outdir_packaged_M3000_2jets/Plots/smodel_RECO_untagged_2jets_2017.png /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_2jets/smodel_RECO_untagged_2jets_2017.png
 
-    cp outdir_packaged_M300_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_2jets/smodel_RECO_untagged_2jets_2017.pdf
-    cp outdir_packaged_M500_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_2jets/smodel_RECO_untagged_2jets_2017.pdf
-    cp outdir_packaged_M700_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_2jets/smodel_RECO_untagged_2jets_2017.pdf
-    cp outdir_packaged_M1000_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_2jets/smodel_RECO_untagged_2jets_2017.pdf
-    cp outdir_packaged_M1500_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_2jets/smodel_RECO_untagged_2jets_2017.pdf
-    cp outdir_packaged_M2000_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_2jets/smodel_RECO_untagged_2jets_2017.pdf
-    cp outdir_packaged_M2600_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_2jets/smodel_RECO_untagged_2jets_2017.pdf
-    cp outdir_packaged_M3000_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_2jets/smodel_RECO_untagged_2jets_2017.pdf
+    # cp outdir_packaged_M300_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_2jets/smodel_RECO_untagged_2jets_2017.pdf
+    # cp outdir_packaged_M500_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_2jets/smodel_RECO_untagged_2jets_2017.pdf
+    # cp outdir_packaged_M700_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_2jets/smodel_RECO_untagged_2jets_2017.pdf
+    # cp outdir_packaged_M1000_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_2jets/smodel_RECO_untagged_2jets_2017.pdf
+    # cp outdir_packaged_M1500_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_2jets/smodel_RECO_untagged_2jets_2017.pdf
+    # cp outdir_packaged_M2000_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_2jets/smodel_RECO_untagged_2jets_2017.pdf
+    # cp outdir_packaged_M2600_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_2jets/smodel_RECO_untagged_2jets_2017.pdf
+    # cp outdir_packaged_M3000_2jets/Plots/smodel_RECO_untagged_2jets_2017.pdf /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_2jets/smodel_RECO_untagged_2jets_2017.pdf
 
 fi

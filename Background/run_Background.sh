@@ -31,13 +31,13 @@ while getopts ":hf:" option; do
    esac
 done
 ########### begin your code ####################
-if [ "$flag" = "BkgFit" ]; then
+if [ "$flag" = "FHBkgFit" ]; then
    echo "running $flag"
    python RunBackgroundScripts.py --inputConfig config_FH_1jet.py --mode fTestParallel
    python RunBackgroundScripts.py --inputConfig config_FH_2jets_3jets.py --mode fTestParallel
    python RunBackgroundScripts.py --inputConfig config_FH_4jets.py --mode fTestParallel
 fi
-if [ "$flag" = "cpBkg_ws" ]; then
+if [ "$flag" = "FHcpBkg_ws" ]; then
     # mv the root file to different ws
    echo "running $flag"
    cp /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws/Data_FH_2017_cat_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_1jet/allData.root
@@ -46,7 +46,7 @@ if [ "$flag" = "cpBkg_ws" ]; then
    
    
 fi
-if [ "$flag" = "cpBkg" ]; then
+if [ "$flag" = "FHcpBkg" ]; then
     # need to mv the output file(CMS-HGG_multipdf_*.root) to */ws/
    echo "running $flag"
    cp outdir_FH_1jet/CMS-HGG_multipdf_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_1jet/CMS-HGG_multipdf_RECO_untagged_1jet_2017.root
@@ -57,9 +57,10 @@ fi
 
 if [ "$flag" = "SLBkgFit" ]; then
    echo "running $flag"
-   python RunBackgroundScripts.py --inputConfig config_SL_1jet.py --mode fTestParallel
-   python RunBackgroundScripts.py --inputConfig config_SL_2jets.py --mode fTestParallel
-
+   python RunBackgroundScripts.py --inputConfig config_SL_1jet_passed100cut.py --mode fTestParallel
+   python RunBackgroundScripts.py --inputConfig config_SL_1jet_unpassed100cut.py --mode fTestParallel
+   python RunBackgroundScripts.py --inputConfig config_SL_2jets_passed100cut.py --mode fTestParallel
+   python RunBackgroundScripts.py --inputConfig config_SL_2jets_unpassed100cut.py --mode fTestParallel
 fi
 if [ "$flag" = "SLcpBkg_ws" ]; then
     # mv the root file to different ws
@@ -71,8 +72,8 @@ fi
 if [ "$flag" = "SLcpBkg" ]; then
     # need to mv the output file(CMS-HGG_multipdf_*.root) to */ws/
    echo "running $flag"
-   cp outdir_SL_1jet/CMS-HGG_multipdf_RECO_untagged_1jet.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet/CMS-HGG_multipdf_RECO_untagged_1jet_2017.root
-   cp outdir_SL_2jets/CMS-HGG_multipdf_RECO_untagged_2jets.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_2jets/CMS-HGG_multipdf_RECO_untagged_2jets_2017.root
-
-   
+   cp outdir_SL_1jet_passed100cut/CMS-HGG_multipdf_RECO_untagged_1jet_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_passed100cut/CMS-HGG_multipdf_RECO_untagged_1jet_SL_passed100cut_2017.root
+   cp outdir_SL_1jet_unpassed100cut/CMS-HGG_multipdf_RECO_untagged_1jet_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_unpassed100cut/CMS-HGG_multipdf_RECO_untagged_1jet_SL_unpassed100cut_2017.root
+   cp outdir_SL_2jets_passed100cut/CMS-HGG_multipdf_RECO_untagged_2jets_SL_passed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_passed100cut/CMS-HGG_multipdf_RECO_untagged_2jets_SL_passed100cut_2017.root
+   cp outdir_SL_2jets_unpassed100cut/CMS-HGG_multipdf_RECO_untagged_2jets_SL_unpassed100cut.root /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_unpassed100cut/CMS-HGG_multipdf_RECO_untagged_2jets_SL_unpassed100cut_2017.root   
 fi

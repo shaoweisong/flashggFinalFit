@@ -130,6 +130,7 @@ if cats == 'auto':
     c = tn.split("_%s_"%sqrts__)[-1].split(";")[0]
     cats.append(c)
 print("cats",cats)
+print(opt.doNOTAG)
 if opt.doNOTAG:
   # Check if NOTAG tree exists
   for tn in listOfTreeNames:
@@ -164,7 +165,7 @@ for cat in cats:
     else:
       dfs[ts] = t.pandas.df(ts)
     dfs[ts].columns = tsColumns
-
+  
   # Main variables to add to nominal RooDataSets
   dfs['main'] = t.pandas.df(mainVars) if cat!='NOTAG' else t.pandas.df(notagVars)
 

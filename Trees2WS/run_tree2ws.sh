@@ -58,31 +58,52 @@ fi
 
 if [ ${WhichSamples} -eq 4 ]
   then
-    echo "running data"
-    python trees2ws_data.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Data_SL_2017_cat_1jet.root
-    python trees2ws_data.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Data_SL_2017_cat_2jets.root
+    echo "running SL data"
+    python trees2ws_data.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Data_2017_SL_1jet_passed100cut.root
+    python trees2ws_data.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Data_2017_SL_2jets_passed100cut.root
+    python trees2ws_data.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Data_2017_SL_1jet_unpassed100cut.root
+    python trees2ws_data.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Data_2017_SL_2jets_unpassed100cut.root
 fi
 
 if [ ${WhichSamples} -eq 5 ]
   then
     echo "running SL channel all cat"
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M300_SL_2017_1jet.root --inputMass 125 --productionMode gghh --year 2017  >M300_hhwwgg_MC_SL_1jet.log 2>&1 
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M500_SL_2017_1jet.root --inputMass 125 --productionMode gghh --year 2017  >M500_hhwwgg_MC_SL_1jet.log 2>&1 
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M700_SL_2017_1jet.root --inputMass 125 --productionMode gghh --year 2017  >M700_hhwwgg_MC_SL_1jet.log 2>&1 
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M1000_SL_2017_1jet.root --inputMass 125 --productionMode gghh --year 2017  >M1000_hhwwgg_MC_SL_1jet.log 2>&1 
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M1500_SL_2017_1jet.root --inputMass 125 --productionMode gghh --year 2017  >M1500_hhwwgg_MC_SL_1jet.log 2>&1 
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M2000_SL_2017_1jet.root --inputMass 125 --productionMode gghh --year 2017  >M2000_hhwwgg_MC_SL_1jet.log 2>&1
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M2600_SL_2017_1jet.root --inputMass 125 --productionMode gghh --year 2017  >M2600_hhwwgg_MC_SL_1jet.log 2>&1
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M3000_SL_2017_1jet.root --inputMass 125 --productionMode gghh --year 2017  >M3000_hhwwgg_MC_SL_1jet.log 2>&1
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M300_SL_2017_1jet_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M300_hhwwgg_MC_SL_1jet_passed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M500_SL_2017_1jet_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M500_hhwwgg_MC_SL_1jet_passed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M700_SL_2017_1jet_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M700_hhwwgg_MC_SL_1jet_passed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M1000_SL_2017_1jet_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M1000_hhwwgg_MC_SL_1jet_passed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M1500_SL_2017_1jet_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M1500_hhwwgg_MC_SL_1jet_passed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M2000_SL_2017_1jet_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M2000_hhwwgg_MC_SL_1jet_passed100cut.log 2>&1
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M2600_SL_2017_1jet_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M2600_hhwwgg_MC_SL_1jet_passed100cut.log 2>&1
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M3000_SL_2017_1jet_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M3000_hhwwgg_MC_SL_1jet_passed100cut.log 2>&1
 
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M300_SL_2017_2jets.root --inputMass 125 --productionMode gghh --year 2017  >M300_hhwwgg_MC_SL_2jets.log 2>&1 
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M500_SL_2017_2jets.root --inputMass 125 --productionMode gghh --year 2017  >M500_hhwwgg_MC_SL_2jets.log 2>&1 
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M700_SL_2017_2jets.root --inputMass 125 --productionMode gghh --year 2017  >M700_hhwwgg_MC_SL_2jets.log 2>&1 
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M1000_SL_2017_2jets.root --inputMass 125 --productionMode gghh --year 2017  >M1000_hhwwgg_MC_SL_2jets.log 2>&1 
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M1500_SL_2017_2jets.root --inputMass 125 --productionMode gghh --year 2017  >M1500_hhwwgg_MC_SL_2jets.log 2>&1 
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M2000_SL_2017_2jets.root --inputMass 125 --productionMode gghh --year 2017  >M2000_hhwwgg_MC_SL_2jets.log 2>&1
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M2600_SL_2017_2jets.root --inputMass 125 --productionMode gghh --year 2017  >M2600_hhwwgg_MC_SL_2jets.log 2>&1
-    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/Signal_M3000_SL_2017_2jets.root --inputMass 125 --productionMode gghh --year 2017  >M3000_hhwwgg_MC_SL_2jets.log 2>&1
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M300_SL_2017_1jet_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M300_hhwwgg_MC_SL_1jet_unpassed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M500_SL_2017_1jet_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M500_hhwwgg_MC_SL_1jet_unpassed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M700_SL_2017_1jet_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M700_hhwwgg_MC_SL_1jet_unpassed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M1000_SL_2017_1jet_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M1000_hhwwgg_MC_SL_1jet_unpassed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M1500_SL_2017_1jet_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M1500_hhwwgg_MC_SL_1jet_unpassed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M2000_SL_2017_1jet_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M2000_hhwwgg_MC_SL_1jet_unpassed100cut.log 2>&1
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M2600_SL_2017_1jet_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M2600_hhwwgg_MC_SL_1jet_unpassed100cut.log 2>&1
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M3000_SL_2017_1jet_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M3000_hhwwgg_MC_SL_1jet_unpassed100cut.log 2>&1
+
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M300_SL_2017_2jets_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M300_hhwwgg_MC_SL_2jets_passed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M500_SL_2017_2jets_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M500_hhwwgg_MC_SL_2jets_passed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M700_SL_2017_2jets_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M700_hhwwgg_MC_SL_2jets_passed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M1000_SL_2017_2jets_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M1000_hhwwgg_MC_SL_2jets_passed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M1500_SL_2017_2jets_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M1500_hhwwgg_MC_SL_2jets_passed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M2000_SL_2017_2jets_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M2000_hhwwgg_MC_SL_2jets_passed100cut.log 2>&1
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M2600_SL_2017_2jets_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M2600_hhwwgg_MC_SL_2jets_passed100cut.log 2>&1
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M3000_SL_2017_2jets_passed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M3000_hhwwgg_MC_SL_2jets_passed100cut.log 2>&1
+
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M300_SL_2017_2jets_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M300_hhwwgg_MC_SL_2jets_unpassed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M500_SL_2017_2jets_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M500_hhwwgg_MC_SL_2jets_unpassed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M700_SL_2017_2jets_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M700_hhwwgg_MC_SL_2jets_unpassed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M1000_SL_2017_2jets_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M1000_hhwwgg_MC_SL_2jets_unpassed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M1500_SL_2017_2jets_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M1500_hhwwgg_MC_SL_2jets_unpassed100cut.log 2>&1 
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M2000_SL_2017_2jets_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M2000_hhwwgg_MC_SL_2jets_unpassed100cut.log 2>&1
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M2600_SL_2017_2jets_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M2600_hhwwgg_MC_SL_2jets_unpassed100cut.log 2>&1
+    python trees2ws.py --inputConfig config_simple.py --inputTreeFile /eos/user/s/shsong/hhwwggSL_root/SL/Signal_M3000_SL_2017_2jets_unpassed100cut.root --inputMass 125 --productionMode gghh --year 2017  >M3000_hhwwgg_MC_SL_2jets_unpassed100cut.log 2>&1
+
 fi
 
 

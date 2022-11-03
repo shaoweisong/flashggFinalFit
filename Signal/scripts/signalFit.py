@@ -53,7 +53,7 @@ def get_options():
   parser.add_option("--scalesGlobal", dest='scalesGlobal', default='', help='Photon shape systematics: scalesGlobal')
   parser.add_option("--smears", dest='smears', default='', help='Photon shape systematics: smears')
   # Parameter values
-  parser.add_option('--replacementThreshold', dest='replacementThreshold', default=100, type='int', help="Nevent threshold to trigger replacement dataset")
+  parser.add_option('--replacementThreshold', dest='replacementThreshold', default=0, type='int', help="Nevent threshold to trigger replacement dataset")
   parser.add_option('--beamspotWidthData', dest='beamspotWidthData', default=3.4, type='float', help="Width of beamspot in data [cm]")
   parser.add_option('--beamspotWidthMC', dest='beamspotWidthMC', default=5.14, type='float', help="Width of beamspot in MC [cm]")
   parser.add_option('--MHPolyOrder', dest='MHPolyOrder', default=1, type='int', help="Order of polynomial for MH dependence")
@@ -89,6 +89,10 @@ if opt.analysis not in globalXSBRMap:
 else: xsbrMap = globalXSBRMap[opt.analysis]
 
 # Load RooRealVars
+# print(opt.inputWSDir)
+# print(opt.proc)
+# print(MHNominal)
+# nominalWSFileName = "/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_1jet_unpassed100cut/output_SignalM1000_1jet_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root"
 nominalWSFileName = glob.glob("%s/output*M%s*%s.root"%(opt.inputWSDir,MHNominal,opt.proc))[0]
 f0 = ROOT.TFile(nominalWSFileName,"read")
 inputWS0 = f0.Get(inputWSName__)
@@ -151,6 +155,8 @@ nominalDatasets = od()
 # For RV (or if skipping vertex scenario split)
 datasetRVForFit = od()
 for mp in opt.massPoints.split(","):
+  print(procRVFit)
+  # WSFileName = "/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_1jet_unpassed100cut/output_SignalM1000_1jet_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root"
   WSFileName = glob.glob("%s/output*M%s*%s.root"%(opt.inputWSDir,mp,procRVFit))[0]
   f = ROOT.TFile(WSFileName,"read")
   inputWS = f.Get(inputWSName__)
@@ -160,8 +166,12 @@ for mp in opt.massPoints.split(","):
   else: datasetRVForFit[mp] = splitRVWV(d,aset,mode="RV")
   inputWS.Delete()
   f.Close()
-
 # Check if nominal yield > threshold (or if +ve sum of weights). If not then use replacement proc x cat
+print(datasetRVForFit)
+print(datasetRVForFit[MHNominal])
+print(opt.replacementThreshold)
+print(datasetRVForFit[MHNominal].sumEntries())
+print(datasetRVForFit[MHNominal].numEntries())
 if( datasetRVForFit[MHNominal].numEntries() < opt.replacementThreshold  )|( datasetRVForFit[MHNominal].sumEntries() < 0. ):
   nominal_numEntries = datasetRVForFit[MHNominal].numEntries()
   print(opt.cat)

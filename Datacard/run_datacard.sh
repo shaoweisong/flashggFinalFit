@@ -3,50 +3,102 @@ WhichSamples=${1}
 
 if [ ${WhichSamples} -eq 0 ]
   then
-    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M300_1jet_SL >M300_SL_1jet_yields.log 2>&1
-    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M500_1jet_SL >M500_SL_1jet_yields.log 2>&1
-    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M700_1jet_SL >M700_SL_1jet_yields.log 2>&1
-    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M1000_1jet_SL >M1000_SL_1jet_yields.log 2>&1
-    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M1500_1jet_SL >M1500_SL_1jet_yields.log 2>&1
-    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M2000_1jet_SL >M2000_SL_1jet_yields.log 2>&1
-    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M2600_1jet_SL >M2600_SL_1jet_yields.log 2>&1
-    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M3000_1jet_SL >M3000_SL_1jet_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_1jet_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_1jet_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_passed100cut --cats auto --procs auto --batch local --ext M300_1jet_SL_passed100cut >M300_SL_1jet_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_1jet_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_1jet_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_unpassed100cut --cats auto --procs auto --batch local --ext M300_1jet_SL_unpassed100cut >M300_SL_1jet_unpassed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_2jets_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_2jets_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_passed100cut --cats auto --procs auto --batch local --ext M300_2jets_SL_passed100cut >M300_SL_2jets_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_2jets_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_2jets_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_unpassed100cut --cats auto --procs auto --batch local --ext M300_2jets_SL_unpassed100cut >M300_SL_2jets_unpassed100cut_yields.log 2>&1
+
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_1jet_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_1jet_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_passed100cut --cats auto --procs auto --batch local --ext M500_1jet_SL_passed100cut >M500_SL_1jet_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_1jet_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_1jet_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_unpassed100cut --cats auto --procs auto --batch local --ext M500_1jet_SL_unpassed100cut >M500_SL_1jet_unpassed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_2jets_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_2jets_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_passed100cut --cats auto --procs auto --batch local --ext M500_2jets_SL_passed100cut >M500_SL_2jets_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_2jets_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_2jets_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_unpassed100cut --cats auto --procs auto --batch local --ext M500_2jets_SL_unpassed100cut >M500_SL_2jets_unpassed100cut_yields.log 2>&1
+
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_1jet_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_1jet_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_passed100cut --cats auto --procs auto --batch local --ext M700_1jet_SL_passed100cut >M700_SL_1jet_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_1jet_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_1jet_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_unpassed100cut --cats auto --procs auto --batch local --ext M700_1jet_SL_unpassed100cut >M700_SL_1jet_unpassed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_2jets_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_2jets_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_passed100cut --cats auto --procs auto --batch local --ext M700_2jets_SL_passed100cut >M700_SL_2jets_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_2jets_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_2jets_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_unpassed100cut --cats auto --procs auto --batch local --ext M700_2jets_SL_unpassed100cut >M700_SL_2jets_unpassed100cut_yields.log 2>&1
+
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_1jet_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_1jet_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_passed100cut --cats auto --procs auto --batch local --ext M1000_1jet_SL_passed100cut >M1000_SL_1jet_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_1jet_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_1jet_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_unpassed100cut --cats auto --procs auto --batch local --ext M1000_1jet_SL_unpassed100cut >M1000_SL_1jet_unpassed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_2jets_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_2jets_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_passed100cut --cats auto --procs auto --batch local --ext M1000_2jets_SL_passed100cut >M1000_SL_2jets_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_2jets_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_2jets_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_unpassed100cut --cats auto --procs auto --batch local --ext M1000_2jets_SL_unpassed100cut >M1000_SL_2jets_unpassed100cut_yields.log 2>&1
+
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_1jet_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_1jet_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_passed100cut --cats auto --procs auto --batch local --ext M1500_1jet_SL_passed100cut >M1500_SL_1jet_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_1jet_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_1jet_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_unpassed100cut --cats auto --procs auto --batch local --ext M1500_1jet_SL_unpassed100cut >M1500_SL_1jet_unpassed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_2jets_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_2jets_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_passed100cut --cats auto --procs auto --batch local --ext M1500_2jets_SL_passed100cut >M1500_SL_2jets_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_2jets_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_2jets_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_unpassed100cut --cats auto --procs auto --batch local --ext M1500_2jets_SL_unpassed100cut >M1500_SL_2jets_unpassed100cut_yields.log 2>&1
+
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_1jet_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_1jet_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_passed100cut --cats auto --procs auto --batch local --ext M2000_1jet_SL_passed100cut >M2000_SL_1jet_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_1jet_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_1jet_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_unpassed100cut --cats auto --procs auto --batch local --ext M2000_1jet_SL_unpassed100cut >M2000_SL_1jet_unpassed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_2jets_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_2jets_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_passed100cut --cats auto --procs auto --batch local --ext M2000_2jets_SL_passed100cut >M2000_SL_2jets_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_2jets_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_2jets_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_unpassed100cut --cats auto --procs auto --batch local --ext M2000_2jets_SL_unpassed100cut >M2000_SL_2jets_unpassed100cut_yields.log 2>&1
+
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_1jet_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_1jet_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_passed100cut --cats auto --procs auto --batch local --ext M2600_1jet_SL_passed100cut >M2600_SL_1jet_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_1jet_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_1jet_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_unpassed100cut --cats auto --procs auto --batch local --ext M2600_1jet_SL_unpassed100cut >M2600_SL_1jet_unpassed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_2jets_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_2jets_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_passed100cut --cats auto --procs auto --batch local --ext M2600_2jets_SL_passed100cut >M2600_SL_2jets_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_2jets_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_2jets_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_unpassed100cut --cats auto --procs auto --batch local --ext M2600_2jets_SL_unpassed100cut >M2600_SL_2jets_unpassed100cut_yields.log 2>&1
+
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_1jet_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_1jet_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_passed100cut --cats auto --procs auto --batch local --ext M3000_1jet_SL_passed100cut >M3000_SL_1jet_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_1jet_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_1jet_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_1jet_unpassed100cut --cats auto --procs auto --batch local --ext M3000_1jet_SL_unpassed100cut >M3000_SL_1jet_unpassed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_2jets_passed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_2jets_passed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_passed100cut --cats auto --procs auto --batch local --ext M3000_2jets_SL_passed100cut >M3000_SL_2jets_passed100cut_yields.log 2>&1
+    python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_2jets_unpassed100cut --sigModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_2jets_unpassed100cut --bkgModelWSDir /eos/user/s/shsong/hhwwggSL_root/SL/ws/ws_2jets_unpassed100cut --cats auto --procs auto --batch local --ext M3000_2jets_SL_unpassed100cut >M3000_SL_2jets_unpassed100cut_yields.log 2>&1
+
+    
+
+    # python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M500_1jet_SL >M500_SL_1jet_yields.log 2>&1
+    # python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M700_1jet_SL >M700_SL_1jet_yields.log 2>&1
+    # python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M1000_1jet_SL >M1000_SL_1jet_yields.log 2>&1
+    # python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M1500_1jet_SL >M1500_SL_1jet_yields.log 2>&1
+    # python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M2000_1jet_SL >M2000_SL_1jet_yields.log 2>&1
+    # python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M2600_1jet_SL >M2600_SL_1jet_yields.log 2>&1
+    # python RunYields.py --inputWSDirMap 2017=/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_1jet --sigModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_1jet --bkgModelWSDir /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_1jet --cats auto --procs auto --batch local --ext M3000_1jet_SL >M3000_SL_1jet_yields.log 2>&1
 
     
    
 fi
 if [ ${WhichSamples} -eq 1 ]
   then
-    python makeDatacard.py --years 2017 --prune --ext 'M300_1jet_SL' --output Datacard_M300_1jet_SL
-    python makeDatacard.py --years 2017 --prune --ext 'M300_2jets_SL' --output Datacard_M300_2jets_SL
-  
-    
-    python makeDatacard.py --years 2017 --prune --ext 'M500_1jet_SL' --output Datacard_M500_1jet_SL
-    python makeDatacard.py --years 2017 --prune --ext 'M500_2jets_SL' --output Datacard_M500_2jets_SL
-  
-    python makeDatacard.py --years 2017 --prune --ext 'M700_1jet_SL' --output Datacard_M700_1jet_SL
-    python makeDatacard.py --years 2017 --prune --ext 'M700_2jets_SL' --output Datacard_M700_2jets_SL
-  
-    
-    python makeDatacard.py --years 2017 --prune --ext 'M1000_1jet_SL' --output Datacard_M1000_1jet_SL
-    python makeDatacard.py --years 2017 --prune --ext 'M1000_2jets_SL' --output Datacard_M1000_2jets_SL
-  
-    
-    python makeDatacard.py --years 2017 --prune --ext 'M1500_1jet_SL' --output Datacard_M1500_1jet_SL
-    python makeDatacard.py --years 2017 --prune --ext 'M1500_2jets_SL' --output Datacard_M1500_2jets_SL
-  
-    
-    python makeDatacard.py --years 2017 --prune --ext 'M2000_1jet_SL' --output Datacard_M2000_1jet_SL
-    python makeDatacard.py --years 2017 --prune --ext 'M2000_2jets_SL' --output Datacard_M2000_2jets_SL
-  
-    
-    python makeDatacard.py --years 2017 --prune --ext 'M2600_1jet_SL' --output Datacard_M2600_1jet_SL
-    python makeDatacard.py --years 2017 --prune --ext 'M2600_2jets_SL' --output Datacard_M2600_2jets_SL
-  
-    
-    python makeDatacard.py --years 2017 --prune --ext 'M3000_1jet_SL' --output Datacard_M3000_1jet_SL
-    python makeDatacard.py --years 2017 --prune --ext 'M3000_2jets_SL' --output Datacard_M3000_2jets_SL
-  
+    python makeDatacard.py --years 2017 --prune --ext 'M300_1jet_SL_passed100cut' --output Datacard_M300_1jet_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M300_1jet_SL_unpassed100cut' --output Datacard_M300_1jet_SL_unpassed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M300_2jets_SL_passed100cut' --output Datacard_M300_2jets_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M300_2jets_SL_unpassed100cut' --output Datacard_M300_2jets_SL_unpassed100cut
+
+    python makeDatacard.py --years 2017 --prune --ext 'M500_1jet_SL_passed100cut' --output Datacard_M500_1jet_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M500_1jet_SL_unpassed100cut' --output Datacard_M500_1jet_SL_unpassed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M500_2jets_SL_passed100cut' --output Datacard_M500_2jets_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M500_2jets_SL_unpassed100cut' --output Datacard_M500_2jets_SL_unpassed100cut
+
+    python makeDatacard.py --years 2017 --prune --ext 'M700_1jet_SL_passed100cut' --output Datacard_M700_1jet_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M700_1jet_SL_unpassed100cut' --output Datacard_M700_1jet_SL_unpassed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M700_2jets_SL_passed100cut' --output Datacard_M700_2jets_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M700_2jets_SL_unpassed100cut' --output Datacard_M700_2jets_SL_unpassed100cut
+
+    python makeDatacard.py --years 2017 --prune --ext 'M1000_1jet_SL_passed100cut' --output Datacard_M1000_1jet_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M1000_1jet_SL_unpassed100cut' --output Datacard_M1000_1jet_SL_unpassed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M1000_2jets_SL_passed100cut' --output Datacard_M1000_2jets_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M1000_2jets_SL_unpassed100cut' --output Datacard_M1000_2jets_SL_unpassed100cut
+
+    python makeDatacard.py --years 2017 --prune --ext 'M1500_1jet_SL_passed100cut' --output Datacard_M1500_1jet_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M1500_1jet_SL_unpassed100cut' --output Datacard_M1500_1jet_SL_unpassed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M1500_2jets_SL_passed100cut' --output Datacard_M1500_2jets_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M1500_2jets_SL_unpassed100cut' --output Datacard_M1500_2jets_SL_unpassed100cut
+
+    python makeDatacard.py --years 2017 --prune --ext 'M2000_1jet_SL_passed100cut' --output Datacard_M2000_1jet_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M2000_1jet_SL_unpassed100cut' --output Datacard_M2000_1jet_SL_unpassed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M2000_2jets_SL_passed100cut' --output Datacard_M2000_2jets_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M2000_2jets_SL_unpassed100cut' --output Datacard_M2000_2jets_SL_unpassed100cut
+
+    python makeDatacard.py --years 2017 --prune --ext 'M2600_1jet_SL_passed100cut' --output Datacard_M2600_1jet_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M2600_1jet_SL_unpassed100cut' --output Datacard_M2600_1jet_SL_unpassed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M2600_2jets_SL_passed100cut' --output Datacard_M2600_2jets_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M2600_2jets_SL_unpassed100cut' --output Datacard_M2600_2jets_SL_unpassed100cut
+
+    python makeDatacard.py --years 2017 --prune --ext 'M3000_1jet_SL_passed100cut' --output Datacard_M3000_1jet_SL_passed100cut
+    # python makeDatacard.py --years 2017 --prune --ext 'M3000_1jet_SL_unpassed100cut' --output Datacard_M3000_1jet_SL_unpassed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M3000_2jets_SL_passed100cut' --output Datacard_M3000_2jets_SL_passed100cut
+    python makeDatacard.py --years 2017 --prune --ext 'M3000_2jets_SL_unpassed100cut' --output Datacard_M3000_2jets_SL_unpassed100cut
+
+    # python makeDatacard.py --years 2017 --prune --ext 'M300_2jets_SL' --output Datacard_M300_2jets_SL
     
 fi
 if [ ${WhichSamples} -eq 2 ]
@@ -71,53 +123,27 @@ if [ ${WhichSamples} -eq 3 ]
 fi
 if [ ${WhichSamples} -eq 4 ]
   then
-    # combine -M AsymptoticLimits -m 125 -n M300_1jet Datacard_M300_1jet_FH.txt --run expected >datacard_limits_M300_1jet.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M500_1jet Datacard_M500_1jet_FH.txt --run expected >datacard_limits_M500_1jet.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M700_1jet Datacard_M700_1jet_FH.txt --run expected >datacard_limits_M700_1jet.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M1000_1jet Datacard_M1000_1jet_FH.txt --run expected >datacard_limits_M1000_1jet.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M1500_1jet Datacard_M1500_1jet_FH.txt --run expected >datacard_limits_M1500_1jet.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M2000_1jet Datacard_M2000_1jet_FH.txt --run expected >datacard_limits_M2000_1jet.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M2600_1jet Datacard_M2600_1jet_FH.txt --run expected >datacard_limits_M2600_1jet.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M3000_1jet Datacard_M3000_1jet_FH.txt --run expected >datacard_limits_M3000_1jet.log 2>&1 
-    
-    # combine -M AsymptoticLimits -m 125 -n M300_2jets_3jets Datacard_M300_2jets_3jets_FH.txt --run expected >datacard_limits_M300_2jets_3jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M500_2jets_3jets Datacard_M500_2jets_3jets_FH.txt --run expected >datacard_limits_M500_2jets_3jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M700_2jets_3jets Datacard_M700_2jets_3jets_FH.txt --run expected >datacard_limits_M700_2jets_3jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M1000_2jets_3jets Datacard_M1000_2jets_3jets_FH.txt --run expected >datacard_limits_M1000_2jets_3jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M1500_2jets_3jets Datacard_M1500_2jets_3jets_FH.txt --run expected >datacard_limits_M1500_2jets_3jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M2000_2jets_3jets Datacard_M2000_2jets_3jets_FH.txt --run expected >datacard_limits_M2000_2jets_3jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M2600_2jets_3jets Datacard_M2600_2jets_3jets_FH.txt --run expected >datacard_limits_M2600_2jets_3jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M3000_2jets_3jets Datacard_M3000_2jets_3jets_FH.txt --run expected >datacard_limits_M3000_2jets_3jets.log 2>&1   
-
-    # combine -M AsymptoticLimits -m 125 -n M300_4jets Datacard_M300_4jets_FH.txt --run expected >datacard_limits_M300_4jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M500_4jets Datacard_M500_4jets_FH.txt --run expected >datacard_limits_M500_4jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M700_4jets Datacard_M700_4jets_FH.txt --run expected >datacard_limits_M700_4jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M1000_4jets Datacard_M1000_4jets_FH.txt --run expected >datacard_limits_M1000_4jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M1500_4jets Datacard_M1500_4jets_FH.txt --run expected >datacard_limits_M1500_4jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M2000_4jets Datacard_M2000_4jets_FH.txt --run expected >datacard_limits_M2000_4jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M2600_4jets Datacard_M2600_4jets_FH.txt --run expected >datacard_limits_M2600_4jets.log 2>&1 
-    # combine -M AsymptoticLimits -m 125 -n M3000_4jets Datacard_M3000_4jets_FH.txt --run expected >datacard_limits_M3000_4jets.log 2>&1 
-
-    combine -M AsymptoticLimits -m 125 -n M300_combined Datacard_combined_M300_SL.txt --run expected >datacard_limits_M300_combined.log 2>&1 
-    combine -M AsymptoticLimits -m 125 -n M500_combined Datacard_combined_M500_SL.txt --run expected >datacard_limits_M500_combined.log 2>&1 
-    combine -M AsymptoticLimits -m 125 -n M700_combined Datacard_combined_M700_SL.txt --run expected >datacard_limits_M700_combined.log 2>&1 
-    combine -M AsymptoticLimits -m 125 -n M1000_combined Datacard_combined_M1000_SL.txt --run expected >datacard_limits_M1000_combined.log 2>&1 
-    combine -M AsymptoticLimits -m 125 -n M1500_combined Datacard_combined_M1500_SL.txt --run expected >datacard_limits_M1500_combined.log 2>&1 
-    combine -M AsymptoticLimits -m 125 -n M2000_combined Datacard_combined_M2000_SL.txt --run expected >datacard_limits_M2000_combined.log 2>&1 
-    combine -M AsymptoticLimits -m 125 -n M2600_combined Datacard_combined_M2600_SL.txt --run expected >datacard_limits_M2600_combined.log 2>&1 
-    combine -M AsymptoticLimits -m 125 -n M3000_combined Datacard_combined_M3000_SL.txt --run expected >datacard_limits_M3000_combined.log 2>&1 
-  
-
+    combine -M AsymptoticLimits -m 125 -n M300_SL Datacard_combined_M300_SL.txt --run expected --rMax 300000 >datacard_limits_M300_SL.log 2>&1 
+    combine -M AsymptoticLimits -m 125 -n M500_SL Datacard_combined_M500_SL.txt --run expected  >datacard_limits_M500_SL.log 2>&1 
+    combine -M AsymptoticLimits -m 125 -n M700_SL Datacard_combined_M700_SL.txt --run expected  >datacard_limits_M700_SL.log 2>&1 
+    combine -M AsymptoticLimits -m 125 -n M1000_SL Datacard_combined_M1000_SL.txt --run expected  >datacard_limits_M1000_SL.log 2>&1 
+    combine -M AsymptoticLimits -m 125 -n M1500_SL Datacard_combined_M1500_SL.txt --run expected  >datacard_limits_M1500_SL.log 2>&1 
+    combine -M AsymptoticLimits -m 125 -n M2000_SL Datacard_combined_M2000_SL.txt --run expected --rMax 30000 >datacard_limits_M2000_SL.log 2>&1 
+    combine -M AsymptoticLimits -m 125 -n M2600_SL Datacard_combined_M2600_SL.txt --run expected --rMax 30000 >datacard_limits_M2600_SL.log 2>&1
+    combine -M AsymptoticLimits -m 125 -n M3000_SL Datacard_combined_M3000_SL.txt --run expected --rMax 500000 >datacard_limits_M3000_SL.log 2>&1
     
 fi
 if [ ${WhichSamples} -eq 5 ]
   # move limit root file to eos to further analysis 
   then
-    # mv higgsCombineM*_1jet.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/1jet_limit
-    # mv higgsCombineM*_2jets_3jets.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/2jets_3jets_limit
-    # mv higgsCombineM*_4jets.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/4jets_limit
-    mv higgsCombineM*_combined*.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/combined_limit
-    
+    mv higgsCombineM300_SL.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwggSL_root/SL/combined_limit
+    mv higgsCombineM500_SL.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwggSL_root/SL/combined_limit
+    mv higgsCombineM700_SL.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwggSL_root/SL/combined_limit
+    mv higgsCombineM1000_SL.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwggSL_root/SL/combined_limit
+    mv higgsCombineM1500_SL.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwggSL_root/SL/combined_limit
+    mv higgsCombineM2000_SL.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwggSL_root/SL/combined_limit
+    mv higgsCombineM2600_SL.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwggSL_root/SL/combined_limit
+    mv higgsCombineM3000_SL.AsymptoticLimits.mH125.root /eos/user/s/shsong/hhwwggSL_root/SL/combined_limit
     
 fi
 if [ ${WhichSamples} -eq 6 ]
@@ -167,14 +193,47 @@ fi
 if [ ${WhichSamples} -eq 8 ]
 
   then
+    combineCards.py SL_1jet_passed100cut_M300=Datacard_M300_1jet_SL_passed100cut.txt SL_2jets_passed100cut_M300=Datacard_M300_2jets_SL_passed100cut.txt SL_1jet_unpassed100cut_M300=Datacard_M300_1jet_SL_unpassed100cut.txt SL_2jets_unpassed100cut_M300=Datacard_M300_2jets_SL_unpassed100cut.txt > Datacard_combined_M300_SL.txt
 
-    combineCards.py Datacard_M300_1jet_SL.txt Datacard_M300_2jets_SL.txt  > Datacard_combined_M300_SL.txt
-    combineCards.py Datacard_M500_1jet_SL.txt Datacard_M500_2jets_SL.txt  > Datacard_combined_M500_SL.txt
-    combineCards.py Datacard_M700_1jet_SL.txt Datacard_M700_2jets_SL.txt  > Datacard_combined_M700_SL.txt
-    combineCards.py Datacard_M1000_1jet_SL.txt Datacard_M1000_2jets_SL.txt  > Datacard_combined_M1000_SL.txt
-    combineCards.py Datacard_M1500_1jet_SL.txt Datacard_M1500_2jets_SL.txt  > Datacard_combined_M1500_SL.txt
-    combineCards.py Datacard_M2000_1jet_SL.txt Datacard_M2000_2jets_SL.txt  > Datacard_combined_M2000_SL.txt
-    combineCards.py Datacard_M2600_1jet_SL.txt Datacard_M2600_2jets_SL.txt  > Datacard_combined_M2600_SL.txt
-    combineCards.py Datacard_M3000_1jet_SL.txt Datacard_M3000_2jets_SL.txt  > Datacard_combined_M3000_SL.txt
+    combineCards.py SL_1jet_passed100cut_M500=Datacard_M500_1jet_SL_passed100cut.txt SL_2jets_passed100cut_M500=Datacard_M500_2jets_SL_passed100cut.txt SL_1jet_unpassed100cut_M500=Datacard_M500_1jet_SL_unpassed100cut.txt SL_2jets_unpassed100cut_M500=Datacard_M500_2jets_SL_unpassed100cut.txt > Datacard_combined_M500_SL.txt
 
+    combineCards.py SL_1jet_passed100cut_M700=Datacard_M700_1jet_SL_passed100cut.txt SL_2jets_passed100cut_M700=Datacard_M700_2jets_SL_passed100cut.txt SL_1jet_unpassed100cut_M700=Datacard_M700_1jet_SL_unpassed100cut.txt SL_2jets_unpassed100cut_M700=Datacard_M700_2jets_SL_unpassed100cut.txt > Datacard_combined_M700_SL.txt
+
+    combineCards.py SL_1jet_passed100cut_M1000=Datacard_M1000_1jet_SL_passed100cut.txt SL_2jets_passed100cut_M1000=Datacard_M1000_2jets_SL_passed100cut.txt SL_1jet_unpassed100cut_M1000=Datacard_M1000_1jet_SL_unpassed100cut.txt SL_2jets_unpassed100cut_M1000=Datacard_M1000_2jets_SL_unpassed100cut.txt > Datacard_combined_M1000_SL.txt
+
+    combineCards.py SL_1jet_passed100cut_M1500=Datacard_M1500_1jet_SL_passed100cut.txt SL_2jets_passed100cut_M1500=Datacard_M1500_2jets_SL_passed100cut.txt SL_1jet_unpassed100cut_M1500=Datacard_M1500_1jet_SL_unpassed100cut.txt SL_2jets_unpassed100cut_M1500=Datacard_M1500_2jets_SL_unpassed100cut.txt > Datacard_combined_M1500_SL.txt
+
+    combineCards.py SL_1jet_passed100cut_M1500=Datacard_M1500_1jet_SL_passed100cut.txt SL_2jets_passed100cut_M1500=Datacard_M1500_2jets_SL_passed100cut.txt SL_1jet_unpassed100cut_M1500=Datacard_M1500_1jet_SL_unpassed100cut.txt SL_2jets_unpassed100cut_M1500=Datacard_M1500_2jets_SL_unpassed100cut.txt > Datacard_combined_M1500_SL.txt
+
+    combineCards.py SL_1jet_passed100cut_M2000=Datacard_M2000_1jet_SL_passed100cut.txt SL_2jets_passed100cut_M2000=Datacard_M2000_2jets_SL_passed100cut.txt SL_1jet_unpassed100cut_M2000=Datacard_M2000_1jet_SL_unpassed100cut.txt SL_2jets_unpassed100cut_M2000=Datacard_M2000_2jets_SL_unpassed100cut.txt > Datacard_combined_M2000_SL.txt
+
+    combineCards.py SL_1jet_passed100cut_M2600=Datacard_M2600_1jet_SL_passed100cut.txt SL_2jets_passed100cut_M2600=Datacard_M2600_2jets_SL_passed100cut.txt SL_1jet_unpassed100cut_M2600=Datacard_M2600_1jet_SL_unpassed100cut.txt SL_2jets_unpassed100cut_M2600=Datacard_M2600_2jets_SL_unpassed100cut.txt > Datacard_combined_M2600_SL.txt
+
+    combineCards.py SL_1jet_passed100cut_M3000=Datacard_M3000_1jet_SL_passed100cut.txt SL_2jets_passed100cut_M3000=Datacard_M3000_2jets_SL_passed100cut.txt SL_2jets_unpassed100cut_M3000=Datacard_M3000_2jets_SL_unpassed100cut.txt > Datacard_combined_M3000_SL.txt
+
+fi
+
+if [ ${WhichSamples} -eq 9 ]
+
+  then
+    combineCards.py SL_2jets_passed100cut_M300=Datacard_M300_2jets_SL_passed100cut.txt SL_2jets_unpassed100cut_M300=Datacard_M300_2jets_SL_unpassed100cut.txt > Datacard_combined_M300_2jets_SL.txt
+    combineCards.py SL_2jets_passed100cut_M500=Datacard_M500_2jets_SL_passed100cut.txt SL_2jets_unpassed100cut_M500=Datacard_M500_2jets_SL_unpassed100cut.txt > Datacard_combined_M500_2jets_SL.txt
+    combineCards.py SL_2jets_passed100cut_M700=Datacard_M700_2jets_SL_passed100cut.txt SL_2jets_unpassed100cut_M700=Datacard_M700_2jets_SL_unpassed100cut.txt > Datacard_combined_M700_2jets_SL.txt
+    combineCards.py SL_2jets_passed100cut_M1000=Datacard_M1000_2jets_SL_passed100cut.txt SL_2jets_unpassed100cut_M1000=Datacard_M1000_2jets_SL_unpassed100cut.txt > Datacard_combined_M1000_2jets_SL.txt
+    combineCards.py SL_2jets_passed100cut_M1500=Datacard_M1500_2jets_SL_passed100cut.txt SL_2jets_unpassed100cut_M1500=Datacard_M1500_2jets_SL_unpassed100cut.txt > Datacard_combined_M1500_2jets_SL.txt
+    combineCards.py SL_2jets_passed100cut_M2000=Datacard_M2000_2jets_SL_passed100cut.txt SL_2jets_unpassed100cut_M2000=Datacard_M2000_2jets_SL_unpassed100cut.txt > Datacard_combined_M2000_2jets_SL.txt
+    combineCards.py SL_2jets_passed100cut_M2600=Datacard_M2600_2jets_SL_passed100cut.txt SL_2jets_unpassed100cut_M2600=Datacard_M2600_2jets_SL_unpassed100cut.txt > Datacard_combined_M2600_2jets_SL.txt
+    combineCards.py SL_2jets_passed100cut_M3000=Datacard_M3000_2jets_SL_passed100cut.txt SL_2jets_unpassed100cut_M3000=Datacard_M3000_2jets_SL_unpassed100cut.txt > Datacard_combined_M3000_2jets_SL.txt
+fi
+if [ ${WhichSamples} -eq 10 ]
+  then
+    combine -M AsymptoticLimits -m 125 -n M300_SL Datacard_combined_M300_2jets_SL.txt --run expected --rMax 500000 
+    combine -M AsymptoticLimits -m 125 -n M500_SL Datacard_combined_M500_2jets_SL.txt --run expected --rMax 500000 
+    combine -M AsymptoticLimits -m 125 -n M700_SL Datacard_combined_M700_2jets_SL.txt --run expected --rMax 500000 
+    combine -M AsymptoticLimits -m 125 -n M1000_SL Datacard_combined_M1000_2jets_SL.txt --run expected --rMax 500000 
+    combine -M AsymptoticLimits -m 125 -n M1500_SL Datacard_combined_M1500_2jets_SL.txt --run expected --rMax 500000 
+    combine -M AsymptoticLimits -m 125 -n M2000_SL Datacard_combined_M2000_2jets_SL.txt --run expected --rMax 500000 
+    combine -M AsymptoticLimits -m 125 -n M2600_SL Datacard_combined_M2600_2jets_SL.txt --run expected --rMax 500000
+    combine -M AsymptoticLimits -m 125 -n M3000_SL Datacard_combined_M3000_2jets_SL.txt --run expected --rMax 500000 
+    
 fi

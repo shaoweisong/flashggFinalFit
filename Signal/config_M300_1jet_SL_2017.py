@@ -5,7 +5,7 @@ _year = '2017'
 signalScriptCfg = {
   
   # Setup
-  'inputWSDir':'/eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_1jet',
+  'inputWSDir':'/eos/user/s/shsong/hhwwgg_root/300/ws_gghh_M300_1jet',
   'procs':'auto', # if auto: inferred automatically from filenames
   'cats':'auto', # if auto: inferred automatically from (0) workspace
   'ext':'dcb_%s_M300_1jet_SL'%_year,

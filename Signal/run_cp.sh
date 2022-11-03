@@ -2,8 +2,8 @@ WhichSamples=${1}
 if [ ${WhichSamples} -eq 0 ]
   then
     echo ${whichsample}
-    # move different cat to different dir
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh/Signal_M300_FH_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh_M300_1jet/output_Signal300_1jet_M125_FH_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    # move different FH cat to different dir
+    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh/Signal_M300_FH_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh_M300_1jet/output_SignalM300_1jet_M125_FH_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
     cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh/Signal_M300_FH_2017_2jets_3jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh_M300_2jets_3jets/output_SignalM300_2jets_3jets_M125_FH_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
     cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh/Signal_M300_FH_2017_4jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_FH/ws_gghh_M300_4jets/output_SignalM300_4jets_M125_FH_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
 
@@ -71,36 +71,49 @@ fi
 if [ ${WhichSamples} -eq 2 ]
   then
     echo ${whichsample}
-    # move different cat to different dir
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M300_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_1jet/output_Signal300_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M300_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M300_2jets/output_SignalM300_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    # move different SL cat to different dir
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M300_SL_2017_1jet_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_1jet_passed100cut/output_SignalM300_1jet_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M300_SL_2017_1jet_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_1jet_unpassed100cut/output_SignalM300_1jet_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M300_SL_2017_2jets_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_2jets_passed100cut/output_SignalM300_2jets_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M300_SL_2017_2jets_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M300_2jets_unpassed100cut/output_SignalM300_2jets_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
 
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M500_SL_2017_1jet_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_1jet_passed100cut/output_SignalM500_1jet_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M500_SL_2017_1jet_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_1jet_unpassed100cut/output_SignalM500_1jet_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M500_SL_2017_2jets_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_2jets_passed100cut/output_SignalM500_2jets_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M500_SL_2017_2jets_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M500_2jets_unpassed100cut/output_SignalM500_2jets_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
 
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M500_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_1jet/output_SignalM500_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M500_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M500_2jets/output_SignalM500_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M700_SL_2017_1jet_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_1jet_passed100cut/output_SignalM700_1jet_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M700_SL_2017_1jet_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_1jet_unpassed100cut/output_SignalM700_1jet_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M700_SL_2017_2jets_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_2jets_passed100cut/output_SignalM700_2jets_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M700_SL_2017_2jets_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M700_2jets_unpassed100cut/output_SignalM700_2jets_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
 
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M1000_SL_2017_1jet_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_1jet_passed100cut/output_SignalM1000_1jet_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M1000_SL_2017_1jet_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_1jet_unpassed100cut/output_SignalM1000_1jet_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M1000_SL_2017_2jets_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_2jets_passed100cut/output_SignalM1000_2jets_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M1000_SL_2017_2jets_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1000_2jets_unpassed100cut/output_SignalM1000_2jets_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
 
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M700_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_1jet/output_SignalM700_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M700_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M700_2jets/output_SignalM700_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M1500_SL_2017_1jet_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_1jet_passed100cut/output_SignalM1500_1jet_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M1500_SL_2017_1jet_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_1jet_unpassed100cut/output_SignalM1500_1jet_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M1500_SL_2017_2jets_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_2jets_passed100cut/output_SignalM1500_2jets_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M1500_SL_2017_2jets_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M1500_2jets_unpassed100cut/output_SignalM1500_2jets_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
 
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M2000_SL_2017_1jet_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_1jet_passed100cut/output_SignalM2000_1jet_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M2000_SL_2017_1jet_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_1jet_unpassed100cut/output_SignalM2000_1jet_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M2000_SL_2017_2jets_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_2jets_passed100cut/output_SignalM2000_2jets_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M2000_SL_2017_2jets_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2000_2jets_unpassed100cut/output_SignalM2000_2jets_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
 
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M1000_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_1jet/output_SignalM1000_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M1000_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1000_2jets/output_SignalM1000_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M2600_SL_2017_1jet_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_1jet_passed100cut/output_SignalM2600_1jet_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M2600_SL_2017_1jet_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_1jet_unpassed100cut/output_SignalM2600_1jet_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M2600_SL_2017_2jets_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_2jets_passed100cut/output_SignalM2600_2jets_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M2600_SL_2017_2jets_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M2600_2jets_unpassed100cut/output_SignalM2600_2jets_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
 
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M3000_SL_2017_1jet_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_1jet_passed100cut/output_SignalM3000_1jet_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M3000_SL_2017_1jet_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_1jet_unpassed100cut/output_SignalM3000_1jet_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M3000_SL_2017_2jets_passed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_2jets_passed100cut/output_SignalM3000_2jets_passed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+    cp /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/Signal_M3000_SL_2017_2jets_unpassed100cut_gghh.root /eos/user/s/shsong/hhwwggSL_root/SL/ws_gghh/ws_gghh_M3000_2jets_unpassed100cut/output_SignalM3000_2jets_unpassed100cut_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
 
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M1500_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_1jet/output_SignalM1500_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M1500_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M1500_2jets/output_SignalM1500_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
-
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M2000_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_1jet/output_SignalM2000_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
-    
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M2000_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2000_2jets/output_SignalM2000_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
-
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M2600_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_1jet/output_SignalM2600_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M2600_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M2600_2jets/output_SignalM2600_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
-
-
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M3000_SL_2017_1jet_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_1jet/output_SignalM3000_1jet_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
-    cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M3000_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_2jets/output_SignalM3000_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
+   
+    # cp  /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh/Signal_M3000_SL_2017_2jets_gghh.root /eos/user/s/shsong/hhwwgg_root/hhwwgg_root_SL/ws_gghh_M3000_2jets/output_SignalM3000_2jets_M125_SL_2017_13TeV_amcatnloFXFX_pythia8_gghh.root
 
 fi
 
